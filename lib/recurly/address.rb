@@ -1,6 +1,5 @@
 module Recurly
   class Address < Resource
-
     define_attribute_methods %w(
       address1
       address2
@@ -11,5 +10,9 @@ module Recurly
       phone
       geo_code
     )
+
+    def changed_attributes
+      attributes
+    end
   end
 end
